@@ -186,18 +186,21 @@ function draw() {
 
   textAlign(RIGHT, CENTER);
   textSize(30);
-  fill(0);
+  let textBox = font.textBounds('在代碼中尋找未定義的自己', width - padding * 2, height / 2 + padding * 10);
+  
+  fill(0, 120);
   stroke(255);
   strokeWeight(1.5);
-  let textBox = font.textBounds('在代碼中尋找未定義的自己', width - padding * 2, height / 2 + padding * 10);
   rect(textBox.x - 15, textBox.y - 15, textBox.w + 30, textBox.h + 30);
+  
+  stroke(255);
   fill(255);
   strokeWeight(0.3);
   text('在代碼中尋找未定義的自己', width - padding * 2, height / 2 + padding * 10);
 
   // ------ 邊框 ------
-  stroke(255);
   strokeWeight(5);
+  stroke(255);
   line(0, 0, width, 0);
   line(0, height, width, height);
   line(0, 0, 0, height);
