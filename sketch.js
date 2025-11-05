@@ -5,6 +5,7 @@ function preload() {
 
 async function setup() {
   createCanvas(1080, 1920);
+  background(0);
   // frameRate(100);
 }
 
@@ -149,6 +150,14 @@ function draw() {
   }
 
   // ------- 內文 -------
+
+//  展名：N{}U──政大區塊鏈應用課程期末成果展
+//  副標題／展覽主題：Undefined一切尚在編譯中
+
+// 展覽時間：12/20 - 12/25
+// 展覽地點：超級浪：中山科藝所 Hyper Wave: ZITA Zhongshan Institute of Techno-Art （10491臺北市中山區南京東路一段8號4F）
+
+// 主辦單位：政大區塊鏈應用課程期末成果展籌備小組、c2x3
   textFont(font);
 
   if (random() < 0.02) {
@@ -165,26 +174,60 @@ function draw() {
   textSize(50);
   text('(12/20 - 25)', width / 2, padding * 2);
   strokeWeight(0);
-  textSize(30);
-  text('Undefined...一切尚在編譯中', width / 2, height - padding * 2);
-
+  textSize(20);
+  text('主辦單位 | 政大區塊鏈應用課程期末成果展籌備小組、c2x3', width / 2, height - padding * 2.5);
+ 
+  
   // 超級浪：中山科藝所 Hyper Wave: ZITA Zhongshan Institute of Techno-Art
   textAlign(RIGHT, TOP);
   strokeWeight(0.3);
   textSize(30);
   text('中山科藝所', width - padding * 2, padding * 2);
   text('超級浪', width - padding * 2, padding * 3);
-
+  
   textAlign(LEFT, TOP);
   strokeWeight(0.3);
   textSize(40);
   text('20', padding * 2, padding * 2);
   text('25', padding * 2, padding * 3);
+  
+  textSize(40);
+  strokeWeight(0);
+  stroke(255);
+  fill(255);
+  let word1 = ["政", "大", "區", "塊", "鏈", "應", "用"];
+  for(let i=0; i<7; i++){
+    text(word1[i], padding * 2.05, padding * 5 + i * 45);
+  }
+  textSize(40);
+  strokeWeight(0);
+  stroke(255);
+  fill(255);
+  let word2 = ["課", "程", "期", "末", "成", "果", "展"];
+  for(let i=0; i<7; i++){
+    text(word2[i], (width-padding)-(padding * 2.05), padding * 5 + i * 45);
+  }
+  
+  stroke(255);
+  fill(255);
+  textSize(30);
+  let word3 = ["U", "n", "d", "e", "f", "i", "n", "e", "d"];
+  strokeWeight(1);
+  for(let i=0; i<9; i++){
+    text(word3[i], padding*2 + i * 50, height - padding * 21);
+  }
+  let word4 = ["一", "切", "尚", "在", "編", "譯", "中"];
+  strokeWeight(1);
+  for(let i=0; i<7; i++){
+    text(word4[i], padding*2 +480+ i * 70, height - padding * 21);
+  }
+
   strokeWeight(3);
   line(width / 7.5, padding * 2.3, width / 5.5, padding * 2.3);
-
-
+  
+  
   textAlign(RIGHT, CENTER);
+
   textSize(30);
   let textBox = font.textBounds('在代碼中尋找未定義的自己', width - padding * 2, height / 2 + padding * 10);
   
